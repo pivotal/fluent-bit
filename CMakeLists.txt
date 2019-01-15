@@ -16,6 +16,10 @@ else()
   set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -D__FILENAME__=__FILE__")
 endif()
 
+# Always look for headers using in the target
+set(CMAKE_FIND_ROOT_PATH_MODE_INCLUDE ONLY)
+message(STATUS "PRJ_SOURCE ${PROJECT_SOURCE_DIR}")
+
 include(GNUInstallDirs)
 include(ExternalProject)
 include(cmake/FindJournald.cmake)

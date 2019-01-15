@@ -98,7 +98,7 @@ set(STATIC_PLUGINS_LIBS "")
 # ===========================================
 
 # Find pthreads
-find_package(Threads)
+find_package(Threads REQUIRED)
 
 if(MK_DEBUG)
   set(CMAKE_BUILD_TYPE "Debug")
