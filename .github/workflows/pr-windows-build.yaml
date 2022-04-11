@@ -47,7 +47,7 @@ jobs:
       working-directory: build
 
     - name: Upload build packages
-      uses: actions/upload-artifact@v2
+      uses: actions/upload-artifact@v3
       with:
         name: windows-packages
         path: |
@@ -69,7 +69,7 @@ jobs:
         docker save -o windows-${{ github.sha }}.tar fluent/fluent-bit:windows-${{ github.sha }}
 
     - name: Upload containers
-      uses: actions/upload-artifact@v2
+      uses: actions/upload-artifact@v3
       with:
         name: windows-containers
         path: windows-${{ github.sha }}.tar
