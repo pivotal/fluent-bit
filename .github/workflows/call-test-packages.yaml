@@ -44,7 +44,7 @@ jobs:
       run: |
         curl --fail -LO "$AWS_URL/latest-version.txt"
         VERSION=$(cat latest-version.txt)
-        echo ::set-output name=VERSION::$VERSION
+        echo "VERSION=$VERSION" >> "$GITHUB_OUTPUT"
       shell: bash
 
     - name: Run package installation tests
